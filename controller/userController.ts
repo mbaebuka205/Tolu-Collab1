@@ -1,4 +1,4 @@
-import { Request, Response } from "mongoose";
+import { Request, Response } from "express";
 import userModel from "../model/userModel";
 
 export const createUser = async (req: Request, res: Response) => {
