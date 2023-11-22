@@ -1,8 +1,13 @@
 import express, { Application } from "express"
 import cors from "cors"
+import { mainApp } from "./mainApp";
 
 const app: Application = express();
 const port: number = 2222;
+
+app.use(cors())
+app.use(express.json())
+mainApp(app)
 
 const server = app.listen(port, ()=>{
     console.log("Let's do this...");
