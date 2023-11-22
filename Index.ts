@@ -18,5 +18,7 @@ process.on("uncaughtException", (err, Error)=>{
 process.on("rejectionHandled", (reason)=>{
     console.log("rejectionHandled", reason);
     
-    process.exit(1);
+    server.close(()=>{
+        process.exit(1)
+    })
 })
